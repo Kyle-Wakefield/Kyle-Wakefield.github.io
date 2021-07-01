@@ -24,7 +24,7 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
-  --bs-primary: #1abc9c;
+  --bs-primary: #4b5755;
   --bs-secondary: #2c3e50;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -47,6 +47,19 @@
   :root {
     scroll-behavior: smooth;
   }
+}
+
+.headshot {
+    border-radius: 50%;
+}
+
+.bg-custom {
+    background-image: url("../assets/img/dark-background.png");
+    background-size: cover;
+}
+
+.tech-icon {
+    width: 75%;
 }
 
 body {
@@ -2964,13 +2977,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  background-color: #555;
+  border-color: #555;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #16a085;
-  border-color: #15967d;
+  background-color: #222;
+  border-color: #222;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -2988,8 +3001,8 @@ textarea.form-control-lg {
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  background-color: #555;
+  border-color: #555;
 }
 
 .btn-secondary {
@@ -7379,7 +7392,7 @@ textarea.form-control-lg {
 }
 
 .text-dark {
-  color: #212529 !important;
+  color: #000 !important;
 }
 
 .text-white {
@@ -7407,11 +7420,19 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  background-color: #1abc9c !important;
+  background-color: #999 !important;
 }
 
 .bg-secondary {
-  background-color: #2c3e50 !important;
+  background-color: #666 !important;
+}
+
+.bg-tertiary {
+    background-color: #333 !important;
+}
+
+.bg-quaternary {
+    background-color: #222 !important;
 }
 
 .bg-success {
@@ -7431,11 +7452,11 @@ textarea.form-control-lg {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #ccc !important;
 }
 
 .bg-dark {
-  background-color: #212529 !important;
+  background-color: #000 !important;
 }
 
 .bg-body {
@@ -10857,7 +10878,7 @@ html {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -10877,26 +10898,43 @@ html {
   justify-content: center;
   align-items: center;
 }
-.divider-custom .divider-custom-line {
+.divider-custom .divider-custom-line-light {
   width: 100%;
-  max-width: 7rem;
+  max-width: 36rem;
   height: 0.25rem;
-  background-color: #2c3e50;
+  background-color: #fff;
   border-radius: 1rem;
-  border-color: #2c3e50;
+  border-color: #fff;
 }
-.divider-custom .divider-custom-line:first-child {
+.divider-custom .divider-custom-line-light:first-child {
   margin-right: 1rem;
 }
-.divider-custom .divider-custom-line:last-child {
+.divider-custom .divider-custom-line-light:last-child {
+  margin-left: 1rem;
+}
+.divider-custom .divider-custom-line-dark {
+  width: 100%;
+  max-width: 36rem;
+  height: 0.25rem;
+  background-color: #000;
+  border-radius: 1rem;
+  border-color: #000;
+}
+.divider-custom .divider-custom-line-dark:first-child {
+  margin-right: 1rem;
+}
+.divider-custom .divider-custom-line-dark:last-child {
   margin-left: 1rem;
 }
 .divider-custom .divider-custom-icon {
   color: #2c3e50;
   font-size: 2rem;
 }
-.divider-custom.divider-light .divider-custom-line {
+.divider-custom.divider-light .divider-custom-line-light {
   background-color: #fff;
+}
+.divider-custom.divider-light .divider-custom-line-dark {
+  background-color: #000;
 }
 .divider-custom.divider-light .divider-custom-icon {
   color: #fff;
@@ -10933,13 +10971,13 @@ html {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #1abc9c;
+  color: #888;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #1abc9c;
+  color: #888;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10961,11 +10999,11 @@ html {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #1abc9c;
+    background: #888;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #1abc9c;
+    background: #888;
   }
 
   #mainNav.navbar-shrink {
@@ -11036,10 +11074,10 @@ html {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  background-color: #aaa;
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
   font-size: 1.5rem;
