@@ -54,7 +54,7 @@
 }
 
 .bg-custom {
-    background-image: url("../assets/img/dark-background.png");
+    background-image: url("../dist/assets/img/dark-background.png");
     background-size: cover;
 }
 
